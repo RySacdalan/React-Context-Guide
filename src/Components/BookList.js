@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class BookList extends React.Component {
+class BookList extends Component {
   render() {
     return (
       <div className="book-list">
