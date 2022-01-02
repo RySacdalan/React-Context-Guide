@@ -12,11 +12,19 @@ class ThemeContextProvider extends Component {
     dark: { syntax: "#ddd", ui: "#333", bg: "#555" },
   };
 
+  ToggleTheme = () => {
+    this.setState({
+      isLightTheme: !this.state.isLightTheme,
+    });
+  };
+
   render() {
     return (
       //We use (.provider) to wrap all components(Child) that can use/pass the data.
       //Use (...) spread syntax to copy all the properties inside the state.
-      <ThemeContext.Provider value={{ ...this.state }}>
+      <ThemeContext.Provider
+        value={{ ...this.state, ToggleTheme: this.ToggleTheme }}
+      >
         {this.props.children}
       </ThemeContext.Provider>
     );
