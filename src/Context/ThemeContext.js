@@ -1,5 +1,4 @@
 import React, { createContext, Component } from "react";
-import { Children } from "react/cjs/react.production.min";
 
 //Create context function that stored inside the ThemeContext.
 export const ThemeContext = createContext();
